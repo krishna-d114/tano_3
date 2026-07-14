@@ -1,7 +1,7 @@
 from typing import TypedDict, List,Dict,Optional
-from pydantic import Basemodel, Field
+from pydantic import BaseModel, Field
 
-class Short Metrics(BaseModel):
+class ShortMetrics(BaseModel):
     title : str = Field(description = "Title of the video")
     views : str = Field(description = "view count ")
     likes : str = Field(description = "likes count")
@@ -9,7 +9,7 @@ class Short Metrics(BaseModel):
     url : str = Field(description = "URL of the short")
 
 
-class CreatorProfie(BaseModel):
+class CreatorProfile(BaseModel):
     channel_id: str
     channel_name:str
     subscribers:int = 0
@@ -38,4 +38,3 @@ class CreatorFinderState(TypedDict):
 
     shortlist:List[CreatorProfile]
     error:str
-    
