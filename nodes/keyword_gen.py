@@ -35,7 +35,7 @@ def keyword_gen_node(state: CreatorFinderState) -> dict:
     print("\n--- NODE 2: KEYWORD GENERATION ---")
 
     completion = client.chat.completions.create(
-        model="google/gemini-2.5-flash",
+        model="nvidia/nemotron-3-ultra-550b-a55b:free",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": f"Generate search keywords for YouTube Shorts creators who could promote this product:\n\n{state['product_description']}"}
