@@ -108,12 +108,7 @@ def get_last_n_shorts(channel_id: str, n: int = 5) -> list[ShortMetrics]:
     return shorts
 
 
-def build_creator_profile(
-    channel_id: str,
-    channel_data: dict,
-    matched_keyword: str,
-    n_shorts: int = 5
-) -> CreatorProfile:
+def build_creator_profile(channel_id: str,channel_data: dict,matched_keyword: str,n_shorts: int = 5) -> CreatorProfile:
     """
     Given raw channel data from the API, build a full CreatorProfile
     including last N shorts.
