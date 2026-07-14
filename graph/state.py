@@ -3,9 +3,9 @@ from pydantic import BaseModel, Field
 
 class ShortMetrics(BaseModel):
     title : str = Field(description = "Title of the video")
-    views : str = Field(description = "view count ")
-    likes : str = Field(description = "likes count")
-    comments : str = Field(description = "comments count")
+    views : int = Field(description = "view count ")
+    likes : int = Field(description = "likes count")
+    comments : int = Field(description = "comments count")
     url : str = Field(description = "URL of the short")
 
 
